@@ -12,8 +12,10 @@
   "author": "Stefan Trajkovic",
   "license": "ISC",
   "dependencies": {
+    "connect-mongo": "1.1.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "mongoose": "^5.0.8"
+    "express-session": "1.12.1",
+    "mongoose": "4.3.1"
   }
 }

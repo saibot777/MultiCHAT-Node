@@ -1,4 +1,5 @@
 {
-    "host": "http://loclahost:3000",
-    "dbURI": "mongodb://admin:admin@ds033976.mlab.com:33976/multi-chat-room"
+    "host": "http://localhost:3000",
+    "dbURI": "mongodb://admin:admin@ds033976.mlab.com:33976/multi-chat-room",
+    "sessionSecret": "iknowwhatyoudidlastsunday"
 }
