@@ -16,6 +16,9 @@ module.exports = () => {
         },
         'post': {
             
+        },
+        'noMatch': (req, res, next) => {
+            res.status(404).sendFile(process.cwd() +'/views/404.htm');
         }
     }
 
