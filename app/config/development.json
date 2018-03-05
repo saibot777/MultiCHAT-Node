@@ -1,5 +1,11 @@
 {
     "host": "http://localhost:3000",
     "dbURI": "mongodb://admin:admin@ds033976.mlab.com:33976/multi-chat-room",
-    "sessionSecret": "iknowwhatyoudidlastsunday"
+    "sessionSecret": "iknowwhatyoudidlastsunday",
+    "fb": {
+        "clientID": "1798105980229147",
+        "clientSecret": "f1644b6f7209e7fd6120e62745719387",
+        "callbackURL": "//localhost:3000/auth/facebook/callback",
+        "profileFields": ["id", "displayName", "photos"]
+    }
 }
