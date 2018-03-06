@@ -4,8 +4,17 @@ const config = require('../config');
 const FacebookStrategy = require('passport-facebook').Strategy;
 const h = require('../helpers');
 
-
 module.exports = () => {
+    passport.serializeUser((user, done) => {
+        done(null, user.id);
+    });
+
+    passport.deserializeUser((id, done) => {
+        h.findById(id)
+            .then(user => done(null, user))
+            .catch(error => console.log('Error when deserializing user'));
+    });
+
     let authProcessor = (accessToken, refreshToken, profile, done) => {
         h.findOne(profile.id)
             .then(result => {
