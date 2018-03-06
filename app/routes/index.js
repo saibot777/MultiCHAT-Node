@@ -9,7 +9,9 @@ module.exports = () => {
                 res.render('login');
             },
             '/rooms': (req, res, next) => {
-                res.render('rooms');
+                res.render('rooms', {
+                    user: req.user
+                });
             },
             '/chat': (req, res, next) => {
                 res.render('chatroom');
@@ -18,7 +20,11 @@ module.exports = () => {
             '/auth/facebook/callback': passport.authenticate('facebook', {
                 successRedirect: '/rooms',
                 failureRedirect: '/'
-            })
+            }),
+            '/logout': (req, res, next) => {
+                req.logout();
+                res.redirect('/');
+            },
         },
         'post': {
             
