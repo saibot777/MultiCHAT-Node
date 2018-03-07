@@ -62,9 +62,18 @@ let findById = id => {
     })
 }
 
+let isAuthenticated = (req, res, next) => {
+    if (req.isAuthenticated()) {
+        next();
+    } else {
+        res.redirect('/')
+    }
+}
+
 module.exports = {
     route, 
     findOne,
     createNewUser,
-    findById
+    findById,
+    isAuthenticated
 }
